@@ -19,10 +19,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <main className="flex-grow flex justify-center justify-items-center items-center">
           {children}
         </main>
-        {/* <footer className="w-full p-4 text-center border-t border-green-500">
-          <p>© {new Date().getFullYear()} ZionCWB. Todos os direitos reservados.</p>
-        </footer> */}
-        <Footer />
+        <Footer />       
       </body>
     </html>
   );

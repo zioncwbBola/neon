@@ -46,16 +46,16 @@ const Navbar: React.FC = () => {
           <>
             <Link href="/" className="text-green-300 font-bold text-lg ">Meu Portfólio</Link><ul className="navbar-menu flex gap-4">
               <li className="navbar-item bg-black/70 p-2 gap-3 text-green-300 lg shadow-lg hover:shadow-green-400 hover:scale-105 transition-transform hover:border-b-2">
-                <Link className="text-green-300" href="#home">Home</Link>
+                <Link className="text-green-300" href="/">Home</Link>
               </li>
               <li className="navbar-item bg-black/70 p-2 gap-3 text-green-300 lg shadow-lg hover:shadow-green-400 hover:scale-105 transition-transform hover:border-b-2">
-                <Link className="text-green-300" href="#about">About</Link>
+                <Link className="text-green-300" href="/about">Curriculo</Link>
               </li>
               <li className="navbar-item bg-black/70 p-2 gap-3 text-green-300 lg shadow-lg hover:shadow-green-400 hover:scale-105 transition-transform hover:border-b-2">
-                <Link className="text-green-300" href="#services">Services</Link>
+                <Link className="text-green-300" href="/services">Projetos</Link>
               </li>
               <li className="navbar-item bg-black/70 p-2 gap-3 text-green-300 lg shadow-lg hover:shadow-green-400 hover:scale-105 transition-transform hover:border-b-2">
-                <Link className="text-green-300" href="#contact">Contact</Link>
+                <Link className="text-green-300" href="/contact">Contato</Link>
               </li>
             </ul>
           </>
@@ -64,16 +64,16 @@ const Navbar: React.FC = () => {
       {isMobile && isMenuOpen && (
         <ul className="navbar-dropdown bg-black/80 flex flex-col items-start p-4 gap-2">
           <li className="navbar-item">
-            <Link className="text-green-300 hover:underline" href="#home">Home</Link>
+            <Link className="text-green-300 hover:underline" href="/">Home</Link>
           </li>
           <li className="navbar-item">
-            <Link className="text-green-300 hover:underline" href="#about">About</Link>
+            <Link className="text-green-300 hover:underline" href="/about">About</Link>
           </li>
           <li className="navbar-item">
-            <Link className="text-green-300 hover:underline" href="#services">Services</Link>
+            <Link className="text-green-300 hover:underline" href="/services">Services</Link>
           </li>
           <li className="navbar-item">
-            <Link className="text-green-300 hover:underline" href="#contact">Contact</Link>
+            <Link className="text-green-300 hover:underline" href="/contact">Contact</Link>
           </li>
 
         </ul>
