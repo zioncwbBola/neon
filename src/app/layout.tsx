@@ -1,4 +1,5 @@
 // src/app/layout.tsx
+import { Footer } from "@/components/Footer";
 import NavbarTail from "@/components/navbar/Navbar";
 import "@/styles/globals.css";
 import { ReactNode } from "react";
@@ -15,12 +16,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <header className="w-full">
           <NavbarTail />
         </header>
-        <main className="flex-grow p-4 flex justify-center items-center">
+        <main className="flex-grow flex justify-center justify-items-center items-center">
           {children}
         </main>
-        <footer className="w-full p-4 text-center border-t border-green-500">
+        {/* <footer className="w-full p-4 text-center border-t border-green-500">
           <p>© {new Date().getFullYear()} ZionCWB. Todos os direitos reservados.</p>
-        </footer>
+        </footer> */}
+        <Footer />
       </body>
     </html>
   );

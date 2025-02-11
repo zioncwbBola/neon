@@ -1,7 +1,7 @@
 // src/components/navbar/Navbar.tsx
 'use client';
 import React, { useState, useEffect } from 'react';
-import '@/styles/Navbar.css';
+import '@/styles/globals.css';
 import Link from 'next/link';
 
 
@@ -33,28 +33,32 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''} lg:flex lg:items-center lg:justify-between lg:px-4 lg:py-2`}>
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''} lg:flex lg:items-center lg:justify-center lg:px-4 lg:py-2`}>
       <div className="navbar-container flex justify-between items-center">
-        <Link href="/" className="text-green-300 font-bold text-lg">Meu Portfólio</Link>
+
         {isMobile ? (
-          <div className="navbar-hamburger" onClick={toggleMenu}>
+          <><div className="navbar-hamburger" onClick={toggleMenu}>
             &#9776;
-          </div>
+          </div><div>
+              <Link href="/" className="text-green-300 font-bold text-lg ">Meu Portfólio</Link>
+            </div></>
         ) : (
-          <ul className="navbar-menu flex gap-4">
-            <li className="navbar-item bg-black/70 p-2 gap-3 text-green-300 lg shadow-lg hover:shadow-green-400 hover:scale-105 transition-transform hover:border-b-2">
-              <Link className="text-green-300" href="#home">Home</Link>
-            </li>
-            <li className="navbar-item bg-black/70 p-2 gap-3 text-green-300 lg shadow-lg hover:shadow-green-400 hover:scale-105 transition-transform hover:border-b-2">
-              <Link className="text-green-300" href="#about">About</Link>
-            </li>
-            <li className="navbar-item bg-black/70 p-2 gap-3 text-green-300 lg shadow-lg hover:shadow-green-400 hover:scale-105 transition-transform hover:border-b-2">
-              <Link className="text-green-300" href="#services">Services</Link>
-            </li>
-            <li className="navbar-item bg-black/70 p-2 gap-3 text-green-300 lg shadow-lg hover:shadow-green-400 hover:scale-105 transition-transform hover:border-b-2">
-              <Link className="text-green-300" href="#contact">Contact</Link>
-            </li>
-          </ul>
+          <>
+            <Link href="/" className="text-green-300 font-bold text-lg ">Meu Portfólio</Link><ul className="navbar-menu flex gap-4">
+              <li className="navbar-item bg-black/70 p-2 gap-3 text-green-300 lg shadow-lg hover:shadow-green-400 hover:scale-105 transition-transform hover:border-b-2">
+                <Link className="text-green-300" href="#home">Home</Link>
+              </li>
+              <li className="navbar-item bg-black/70 p-2 gap-3 text-green-300 lg shadow-lg hover:shadow-green-400 hover:scale-105 transition-transform hover:border-b-2">
+                <Link className="text-green-300" href="#about">About</Link>
+              </li>
+              <li className="navbar-item bg-black/70 p-2 gap-3 text-green-300 lg shadow-lg hover:shadow-green-400 hover:scale-105 transition-transform hover:border-b-2">
+                <Link className="text-green-300" href="#services">Services</Link>
+              </li>
+              <li className="navbar-item bg-black/70 p-2 gap-3 text-green-300 lg shadow-lg hover:shadow-green-400 hover:scale-105 transition-transform hover:border-b-2">
+                <Link className="text-green-300" href="#contact">Contact</Link>
+              </li>
+            </ul>
+          </>
         )}
       </div>
       {isMobile && isMenuOpen && (
@@ -71,7 +75,9 @@ const Navbar: React.FC = () => {
           <li className="navbar-item">
             <Link className="text-green-300 hover:underline" href="#contact">Contact</Link>
           </li>
+
         </ul>
+
       )}
     </nav>
   );
