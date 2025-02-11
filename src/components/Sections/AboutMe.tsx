@@ -1,17 +1,12 @@
+
 const AboutMe = () => {
   return (
-    <div className="card card-side bg-base-100 w-screen shadow-xl">
-      <figure>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-          alt="Movie"
-        />
-      </figure>
+    <div className="card card-side bg-black/70 ml-10 text-green-300 lg:shadow-lg hover:shadow-green-400 hover:scale-105 transition-transform w-30">
       <div className="card-body">
-        <h2 className="card-title">New movie is released!</h2>
-        <p>Click the button to watch on Jetflix app.</p>
+        <h2 className="card-title">About Me</h2>
+        <p>This is a brief description about me.</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Watch</button>
+          <button className="btn btn-primary">Learn More</button>
         </div>
       </div>
     </div>

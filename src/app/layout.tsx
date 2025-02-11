@@ -4,8 +4,8 @@ import "@/styles/globals.css";
 import { ReactNode } from "react";
 
 export const metadata = {
-  title: "Meu Portfólio",
-  description: "Portfólio pessoal desenvolvido em Next.js",
+  title: "ZionCWB",
+  description: "Portfólio pessoal André Lopes Paiva",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {children}
         </main>
         <footer className="w-full p-4 text-center border-t border-green-500">
-          <p>© {new Date().getFullYear()} Meu Portfólio. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} ZionCWB. Todos os direitos reservados.</p>
         </footer>
       </body>
     </html>
