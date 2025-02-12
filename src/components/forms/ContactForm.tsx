@@ -1,51 +1,132 @@
-// src/components/forms/ContactForm.tsx
 /* eslint-disable @typescript-eslint/no-unused-vars */
+// // src/components/forms/ContactForm.tsx
+// /* eslint-disable @typescript-eslint/no-unused-vars */
 
-"use client";
+// "use client";
 
-import { useState } from "react";
+// import { useState } from "react";
+
+// export default function ContactForm() {
+//   const [formData, setFormData] = useState({
+//     name: "",
+//     email: "",
+//     message: "",
+//   });
+//   const [loading, setLoading] = useState(false);
+//   const [success, setSuccess] = useState<string | null>(null);
+
+//   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+//     setFormData({ ...formData, [e.target.name]: e.target.value });
+//   };
+
+//   const handleSubmit = async (e: React.FormEvent) => {
+//     e.preventDefault();
+//     setLoading(true);
+//     setSuccess(null);
+
+//     try {
+//       const response = await fetch("/api/contact", {
+//         method: "POST",
+//         headers: { "Content-Type": "application/json" },
+//         body: JSON.stringify(formData),
+//       });
+
+//       if (response.ok) {
+//         setSuccess("Mensagem enviada com sucesso!");
+//         setFormData({ name: "", email: "", message: "" });
+//       } else {
+//         setSuccess("Erro ao enviar mensagem.");
+//       }
+//     } catch (error) {
+//       setSuccess("Erro ao enviar mensagem.");
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
+
+//   return (
+//     <div className="max-w-md mx-auto p-6 bg-base-200 rounded-xl shadow-md">
+//       <h2 className="text-2xl font-bold text-center mb-4">Contato</h2>
+//       <form onSubmit={handleSubmit} className="space-y-4">
+//         <input
+//           type="text"
+//           name="name"
+//           placeholder="Nome"
+//           value={formData.name}
+//           onChange={handleChange}
+//           className="input input-bordered w-full"
+//           required
+//         />
+//         <input
+//           type="email"
+//           name="email"
+//           placeholder="E-mail"
+//           value={formData.email}
+//           onChange={handleChange}
+//           className="input input-bordered w-full"
+//           required
+//         />
+//         <textarea
+//           name="message"
+//           placeholder="Mensagem"
+//           value={formData.message}
+//           onChange={handleChange}
+//           className="textarea textarea-bordered w-full"
+//           required
+//         ></textarea>
+//         <button type="submit" className="btn btn-primary w-full" disabled={loading}>
+//           {loading ? "Enviando..." : "Enviar"}
+//         </button>
+//       </form>
+//       {success && <p className="text-center mt-4 text-success">{success}</p>}
+//     </div>
+//   );
+// }
+"use client"
+
+import { useState } from "react"
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
-  });
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState<string | null>(null);
+  })
+  const [loading, setLoading] = useState(false)
+  const [success, setSuccess] = useState<string | null>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setSuccess(null);
+    e.preventDefault()
+    setLoading(true)
+    setSuccess(null)
 
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
-      });
+      })
 
       if (response.ok) {
-        setSuccess("Mensagem enviada com sucesso!");
-        setFormData({ name: "", email: "", message: "" });
+        setSuccess("Mensagem enviada com sucesso!")
+        setFormData({ name: "", email: "", message: "" })
       } else {
-        setSuccess("Erro ao enviar mensagem.");
+        setSuccess("Erro ao enviar mensagem.")
       }
     } catch (error) {
-      setSuccess("Erro ao enviar mensagem.");
+      setSuccess("Erro ao enviar mensagem.")
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  };
+  }
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-base-200 rounded-xl shadow-md">
-      <h2 className="text-2xl font-bold text-center mb-4">Contato</h2>
+    <div className="max-w-md mx-auto p-6 bg-slate-800 rounded-xl shadow-lg">
+      <h2 className="text-2xl font-bold text-center mb-4 text-green-400">Contato</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
           type="text"
@@ -53,7 +134,7 @@ export default function ContactForm() {
           placeholder="Nome"
           value={formData.name}
           onChange={handleChange}
-          className="input input-bordered w-full"
+          className="w-full px-3 py-2 bg-slate-700 text-green-400 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
           required
         />
         <input
@@ -62,7 +143,7 @@ export default function ContactForm() {
           placeholder="E-mail"
           value={formData.email}
           onChange={handleChange}
-          className="input input-bordered w-full"
+          className="w-full px-3 py-2 bg-slate-700 text-green-400 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
           required
         />
         <textarea
@@ -70,14 +151,19 @@ export default function ContactForm() {
           placeholder="Mensagem"
           value={formData.message}
           onChange={handleChange}
-          className="textarea textarea-bordered w-full"
+          className="w-full px-3 py-2 bg-slate-700 text-green-400 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400 h-32"
           required
         ></textarea>
-        <button type="submit" className="btn btn-primary w-full" disabled={loading}>
+        <button
+          type="submit"
+          className="w-full bg-green-500 text-slate-900 py-2 rounded-md hover:bg-green-400 transition-colors focus:outline-none focus:ring-2 focus:ring-green-400"
+          disabled={loading}
+        >
           {loading ? "Enviando..." : "Enviar"}
         </button>
       </form>
-      {success && <p className="text-center mt-4 text-success">{success}</p>}
+      {success && <p className="text-center mt-4 text-green-400">{success}</p>}
     </div>
-  );
+  )
 }
+

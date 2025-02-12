@@ -10,6 +10,8 @@ const nextConfig = {
   images: {
     domains: ["image.thum.io"],
   },
+  reactStrictMode: true,
+  swcMinify: true,
 };
 
 module.exports = nextConfig;

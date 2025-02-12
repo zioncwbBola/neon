@@ -2,85 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-/*.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  transition: background-color 0.3s ease;
-}*/
-
-/* .navbar.scrolled {
-  /*background-color: rgba(255, 255, 255, 0.8);
-  /* Ajuste a cor e a opacidade conforme necessário 
-  backdrop-filter: blur(10px);
-  /* Adiciona um efeito de desfoque 
-} */
-
-/* .navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 16px;
-} */
-
-/* .navbar-logo {
-  color: #f2f2f2;
-  font-size: 20px;
-  font-weight: bold;
-} */
-
-.navbar-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
 
-/* .navbar-item {
-  margin-left: 16px;
-} */
-
-/* .navbar a {
-  color: #f2f2f2;
-  text-align: center;
-  text-decoration: none;
-  font-size: 17px;
-} */
-
-/* .navbar a:hover {
-  background-color: #ddd;
-  color: black;
-} */
-
-/* .navbar a.active {
-  background-color: #4CAF50;
-  color: white;
-} */
-
-/* .navbar-hamburger {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-} */
-
-@media (max-width: 768px) {
-  .navbar-menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .navbar-menu.mobile {
-    display: flex;
-  }
-
-  .navbar-item {
-    margin: 0;
-    text-align: center;
-    padding: 14px 0;
-  }
-
-  .navbar-hamburger {
-    display: block;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
   }
 }
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
