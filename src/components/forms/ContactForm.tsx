@@ -127,7 +127,7 @@ export default function ContactForm() {
   return (
     <div className="max-w-md mx-auto p-6 bg-slate-800 rounded-xl shadow-lg">
       <h2 className="text-2xl font-bold text-center mb-4 text-green-400">Contato</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4" netlify>
         <input
           type="text"
           name="name"
