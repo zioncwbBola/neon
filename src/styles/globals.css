@@ -2,40 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #000;
-  color: #00FF00;
-  font-family: 'Orbitron', sans-serif;
-}
-
-
-
-.navbar {
+/*.navbar {
   position: fixed;
   top: 0;
   width: 100%;
   transition: background-color 0.3s ease;
-}
+}*/
 
-.navbar.scrolled {
-  background-color: rgba(255, 255, 255, 0.8);
-  /* Ajuste a cor e a opacidade conforme necessário */
+/* .navbar.scrolled {
+  /*background-color: rgba(255, 255, 255, 0.8);
+  /* Ajuste a cor e a opacidade conforme necessário 
   backdrop-filter: blur(10px);
-  /* Adiciona um efeito de desfoque */
-}
+  /* Adiciona um efeito de desfoque 
+} */
 
-.navbar-container {
+/* .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 14px 16px;
-}
+} */
 
-.navbar-logo {
+/* .navbar-logo {
   color: #f2f2f2;
   font-size: 20px;
   font-weight: bold;
-}
+} */
 
 .navbar-menu {
   list-style: none;
@@ -44,32 +36,32 @@ body {
   display: flex;
 }
 
-.navbar-item {
+/* .navbar-item {
   margin-left: 16px;
-}
+} */
 
-.navbar a {
+/* .navbar a {
   color: #f2f2f2;
   text-align: center;
   text-decoration: none;
   font-size: 17px;
-}
+} */
 
 /* .navbar a:hover {
   background-color: #ddd;
   color: black;
 } */
 
-.navbar a.active {
+/* .navbar a.active {
   background-color: #4CAF50;
   color: white;
-}
+} */
 
-.navbar-hamburger {
+/* .navbar-hamburger {
   display: none;
   font-size: 30px;
   cursor: pointer;
-}
+} */
 
 @media (max-width: 768px) {
   .navbar-menu {

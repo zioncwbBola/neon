@@ -2,6 +2,8 @@ import Projects from "@/components/Sections/Project";
 
 export default function ServicesPage() {
   return (
-    <Projects />
+    <div className="flex items-center justify-center w-screen h-screen rounded-lg shadow-lg ">
+      <Projects />
+    </div>
   );
 }

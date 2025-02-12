@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''} lg:flex lg:items-center lg:justify-center lg:px-4 lg:py-2`}>
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''} lg:fixed lg:flex lg:items-center lg:justify-center lg:px-4 lg:py-2 blur-10` }>
       <div className="navbar-container flex justify-between items-center">
 
         {isMobile ? (
@@ -45,8 +45,8 @@ const Navbar: React.FC = () => {
         ) : (
           <>
             <Link href="/" className="text-green-300 font-bold text-lg ">Meu Portfólio</Link><ul className="navbar-menu flex gap-4">
-              <li className="navbar-item bg-black/70 p-2 gap-3 text-green-300 lg shadow-lg hover:shadow-green-400 hover:scale-105 transition-transform hover:border-b-2">
-                <Link className="text-green-300" href="/">Home</Link>
+              <li className="navbar-item ml-4 bg-black/70 p-2 gap-3 text-green-300 lg shadow-lg hover:shadow-green-400 hover:scale-105 transition-transform hover:border-b-2">
+                <Link className="text-green-300 text-center no-underline text-base" href="/">Home</Link>
               </li>
               <li className="navbar-item bg-black/70 p-2 gap-3 text-green-300 lg shadow-lg hover:shadow-green-400 hover:scale-105 transition-transform hover:border-b-2">
                 <Link className="text-green-300" href="/about">Curriculo</Link>
