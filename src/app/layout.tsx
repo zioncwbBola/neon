@@ -151,7 +151,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <header className="w-full">
           <Navbar isScrolled={false} />
         </header>
-        <main className="flex-grow flex justify-center justify-items-center items-center">{children}</main>
+        <main className="flex-grow flex justify-center justify-items-center items-center py-10">{children}</main>
         <Footer />
       </body>
     </html>
