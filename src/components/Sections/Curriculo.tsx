@@ -1,3 +1,4 @@
+// src/components/Sections/Curriculo.tsx
 "use client";
 
 import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa";

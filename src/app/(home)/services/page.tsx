@@ -1,3 +1,4 @@
+// src/app/%28home%29/services/page.tsx
 import Projects from "@/components/Sections/Project";
 
 export default function ServicesPage() {

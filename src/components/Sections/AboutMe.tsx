@@ -1,4 +1,4 @@
-
+// src/components/Sections/AboutMe.tsx
 const AboutMe = () => {
   return (
     <div className="card card-side bg-black/70 ml-10 text-green-300 lg:shadow-lg hover:shadow-green-400 hover:scale-105 transition-transform w-30">
