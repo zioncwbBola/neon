@@ -145,22 +145,22 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
           </button>
           <ul className="hidden lg:flex space-x-4">
             <li>
-              <Link href="/" className="text-green-400 hover:text-green-300 transition-colors">
+              <Link href="/" className="text-green-400 hover:shadow-lg hover:shadow-lime-500 hover:text-green-300 transition-colors">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/about" className="text-green-400 hover:text-green-300 transition-colors">
+              <Link href="/about" className="text-green-400 hover:shadow-lg hover:shadow-lime-500 hover:text-green-300 transition-colors">
                 Currículo
               </Link>
             </li>
             <li>
-              <Link href="/services" className="text-green-400 hover:text-green-300 transition-colors">
+              <Link href="/services" className="text-green-400 hover:shadow-lg hover:shadow-lime-500 hover:text-green-300 transition-colors">
                 Projetos
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="text-green-400 hover:text-green-300 transition-colors">
+              <Link href="/contact" className="text-green-400 hover:shadow-lg hover:shadow-lime-500 hover:text-green-300 transition-colors">
                 Contato
               </Link>
             </li>
@@ -171,22 +171,22 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
         <div className="lg:hidden">
           <ul className="absolute top-full left-0 right-0 bg-slate-900/95 py-2 px-4 space-y-2">
             <li>
-              <Link href="/" className="block text-green-400 hover:text-green-300 transition-colors py-2">
+              <Link href="/" className="block text-green-400 hover:shadow-lg hover:shadow-lime-500 hover:text-green-300 transition-colors py-2">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/about" className="block text-green-400 hover:text-green-300 transition-colors py-2">
+              <Link href="/about" className="block text-green-400 hover:shadow-lg hover:shadow-lime-500 hover:text-green-300 transition-colors py-2">
                 Currículo
               </Link>
             </li>
             <li>
-              <Link href="/services" className="block text-green-400 hover:text-green-300 transition-colors py-2">
+              <Link href="/services" className="block text-green-400 hover:shadow-lg hover:shadow-lime-500 hover:text-green-300 transition-colors py-2">
                 Projetos
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="block text-green-400 hover:text-green-300 transition-colors py-2">
+              <Link href="/contact" className="block text-green-400 hover:shadow-lg hover:shadow-lime-500 hover:text-green-300 transition-colors py-2">
                 Contato
               </Link>
             </li>

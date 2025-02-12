@@ -24,17 +24,17 @@ export default function Resume() {
       <p className="text-lg text-green-300">Desenvolvedor Full Stack</p>
 
       <div className="mt-4 flex justify-center gap-4 text-xl">
-        <a href="mailto:seuemail@email.com" className="hover:text-green-300 transition-colors">
+        <a href="mailto:seuemail@email.com" className="hover:text-green-300 hover:shadow-lg hover:shadow-lime-500 transition-colors">
           <FaEnvelope />
         </a>
-        <a href="tel:+55999999999" className="hover:text-green-300 transition-colors">
+        <a href="tel:+55999999999" className="hover:text-green-300 hover:shadow-lg hover:shadow-lime-500 transition-colors">
           <FaPhone />
         </a>
         <a
           href="https://linkedin.com/in/andrelopez33"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-green-300 transition-colors"
+          className="hover:text-green-300 hover:shadow-lg hover:shadow-lime-500 transition-colors"
         >
           <FaLinkedin />
         </a>
@@ -42,7 +42,7 @@ export default function Resume() {
           href="https://github.com/zioncwbBola"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-green-300 transition-colors"
+          className="hover:text-green-300 hover:shadow-lg hover:shadow-lime-500 transition-colors"
         >
           <FaGithub />
         </a>
